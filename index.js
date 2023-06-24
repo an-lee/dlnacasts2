@@ -78,7 +78,7 @@ module.exports = function () {
 
         var media = {
           autoplay: opts.autoPlay !== false,
-          contentType: opts.type || mime.lookup(url, 'video/mp4'),
+          contentType: opts.type || mime.getType(url, 'video/mp4'),
           metadata: opts.metadata || {
             title: opts.title || '',
             type: 'video', // can be 'video', 'audio' or 'image'
